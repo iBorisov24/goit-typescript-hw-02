@@ -1,5 +1,7 @@
+import { FC } from "react";
 import css from "./ImageCard.module.css";
-export default function ImageCard({ url, alt, onClickFoo, bigUrl }) {
+import { ImageCardProps } from "../../types";
+const ImageCard: FC<ImageCardProps> = ({ url, alt, onClickFoo, bigUrl }) => {
   return (
     <div>
       <img
@@ -14,4 +16,5 @@ export default function ImageCard({ url, alt, onClickFoo, bigUrl }) {
       />
     </div>
   );
-}
+};
+export default ImageCard;

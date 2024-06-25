@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const base_url: string = 'https://api.unsplash.com/search/photos';
+
 export async function fetchUrl<T>(
 	query: string,
 	currentPage: number
