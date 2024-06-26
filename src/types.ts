@@ -1,30 +1,35 @@
 export type Collection = {
-  // [key: string]: string | number;
+	// [key: string]: string | number;
 	urls: {
 		small: string;
 		regular: string;
-  };
-  alt_description: string;
-  id: number;
+	};
+	alt_description: string;
+	id: number;
 };
+export interface ApiResponse {
+	results: Collection[];
+	total: number;
+	total_pages: number;
+}
 export interface ImageModalProps {
-  isOpen: boolean;
-  closeModal: () => void;
-  imageInfo: string;
+	isOpen: boolean;
+	closeModal: () => void;
+	imageInfo: string;
 }
 export interface ImageGalleryProps {
-  gallery: Collection[];
-  onClickFoo: (url: string) => void;
+	gallery: Collection[];
+	onClickFoo: (url: string) => void;
 }
 export interface ImageCardProps {
-  url: string;
-  alt: string;
-  onClickFoo: (url: string) => void;
-  bigUrl: string;
+	url: string;
+	alt: string;
+	onClickFoo: (url: string) => void;
+	bigUrl: string;
 }
 export interface searchBarProps {
-  onSubmit: (value: string) => void;
+	onSubmit: (value: string) => void;
 }
 export interface button {
-  clickBtn: () => void;
+	clickBtn: () => void;
 }
